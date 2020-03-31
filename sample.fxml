@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<!-- This file sets each component of our JavaFX application in proper place in the application window. -->
+
+
+<BorderPane fx:id="mainPane" prefHeight="150.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller"> <!-- From there we should take instructions what to do when e.g. button will be pressed. -->
+<top>
+    <Label fx:id="statusLabel" wrapText="true" prefWidth="280.0" text="Pick a file to upload.">
+        <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </BorderPane.margin>
+    </Label>
+</top>
+
+<center>
+    <ProgressBar fx:id="progressBar" progress="0.0"  prefWidth="280.0" prefHeight="20.0">
+        <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </BorderPane.margin>
+    </ProgressBar>
+</center>
+
+<bottom>
+    <Button fx:id="uploadButton" onAction="#ButtonAction" prefWidth="280.0" prefHeight="20.0" text="Upload file..">
+        <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </BorderPane.margin>
+    </Button>
+</bottom>
+
+</BorderPane>
